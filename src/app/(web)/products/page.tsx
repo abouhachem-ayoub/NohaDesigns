@@ -39,7 +39,6 @@ const Products = () => {
             })
     }
     const filteredProducts = filterProducts(data||[]);
-    console.log(filteredProducts);
   return (
     <div className="container mx-auto pt-10">
         <Search productTypeFilter={productTypeFilter} searchQuery={searchQuery} setProductTypeFilter={setProductTypeFilter} setSearchQuery={setSearchQuery}/>

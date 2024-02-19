@@ -54,7 +54,6 @@ try {
         statusText:'Payment session created'
     })
 } catch (error:any) {
-    console.log('payment failed!');
     return new NextResponse(error,{status:500})
 }
 }

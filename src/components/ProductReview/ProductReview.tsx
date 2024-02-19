@@ -12,7 +12,6 @@ const ProductReview:FC<{productId:string}> = ({productId}) => {
   const {data:ProductReviews,isLoading,error} = useSWR('/api/product-reviews',fetchProductReviews,{refreshInterval:5000});
   if(error) throw new Error("something went wrong!");
   if(typeof ProductReviews === 'undefined' && !isLoading) throw new Error("something went wrong");
-  console.log(ProductReviews)
   return (
     <>
     {ProductReviews ? ProductReviews.map((review :Review) => 

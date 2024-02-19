@@ -38,10 +38,8 @@ const UserDetails = (props :{params:{id:string}}) => {
                 reviewText:opinion,
                 ratingValue:rating
             });
-            console.log(data);
             toast.success("review was submitted successfully")
         } catch (error) {
-            console.log(error);
             toast.error('something went wrong! try again later or contact us')
         }
         finally{

@@ -34,20 +34,17 @@ const Auth = () => {
             await signIn();
             router.push('/');
         } catch (error) {
-            console.log(error);
             toast.error("something went wrong!")
         }
     };
     const handleSubmit = async (event : FormEvent<HTMLFormElement>)=>{
             event.preventDefault();
             try {
-                console.log(formData)
                 const user = await signUp(formData);
                 if(user){
                     toast.success("Success, please sign in");
                 }
             } catch (error) {
-                console.log(error);
                 toast.error("something went wrong, please try again!");
             }finally{
                 setFormData(defaultFormData);

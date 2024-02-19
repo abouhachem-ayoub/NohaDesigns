@@ -16,7 +16,6 @@ import ProductReview from "@/components/ProductReview/ProductReview";
 const ProductDetails = (props: { params: { _id: string } }) => {
     let isBought :boolean;
     const { params: {_id} } = props;
-    console.log(_id);
     const { data: session } = useSession();
     const fetchProdcut = async () => {
         return getProduct(_id);
@@ -34,14 +33,11 @@ const ProductDetails = (props: { params: { _id: string } }) => {
         revalidateOnMount:true,
         refreshInterval:1000 
             });
-    console.log(check);
         if(check) {
             isBought=true;
-            console.log(isBought)
                 }
         else{
             isBought=false;
-            console.log(isBought);
         }
     const handleBuyNowClick = async () => {
         const stripe = await getStripe();
@@ -50,7 +46,6 @@ const ProductDetails = (props: { params: { _id: string } }) => {
                 if(check){
                     await axios.get(`/products/${_id}`);
                 }
-                console.log(product._id);
                 const { data: stripeSession } = await axios.post('/api/stripe', { productId: product._id })
                 if (stripe) {
                     const result = await stripe.redirectToCheckout({
@@ -64,7 +59,6 @@ const ProductDetails = (props: { params: { _id: string } }) => {
             }
         }
         catch (error) {
-            console.log('error', error);
             toast('An error occured!')
         }
     }

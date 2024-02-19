@@ -22,12 +22,10 @@ export async function POST(req:Request , res:Response) {
     switch(event.type){
         case checkout_session_completed :
             const session = event.data.object;
-            console.log(session.metadata);
             //@ts-ignore
             const {metadata:{user,product,totalPrice,orderDate}} = session;
             //@ts-ignore
             const total = Number(totalPrice);
-            console.log(total);
             //@ts-ignore
             await createOrder({user,product,orderDate,totalPrice:total});
             return NextResponse.json('order created successfully',{status:200, statusText:'order successful'})

@@ -38,7 +38,6 @@ export async function POST (req:Request,res:Response){
                 return NextResponse.json(data,{status:200,statusText:"success"})
 
     } catch (error : any) {
-        console.log('unable to update',error);
         return new NextResponse('cannot add review, something went wrong!',{status:500})
     }
 }

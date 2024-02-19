@@ -26,7 +26,6 @@ const handlePrevious = () =>{
 const maximumVisiblePhotos = 4;
 const displayPhotos = photos.slice(1,maximumVisiblePhotos-1);
 const remainingPhotosCount = photos.length - maximumVisiblePhotos;
-console.log(remainingPhotosCount);
   return (
     <div className="container mx-auto ">
         <div className="grid md:grid-cols-2 relative gap-5 px-3">
