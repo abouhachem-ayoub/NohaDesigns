@@ -9,7 +9,7 @@ const ProductReview:FC<{productId:string}> = ({productId}) => {
     const {data} = await axios.get<Review[]>(`/api/product-reviews/${productId}`);
     return data;
   }
-  const {data:ProductReviews,isLoading,error} = useSWR('/api/product-reviews',fetchProductReviews);
+  const {data:ProductReviews,isLoading,error} = useSWR('/api/product-reviews',fetchProductReviews,{refreshInterval:5000});
   if(error) throw new Error("something went wrong!");
   if(typeof ProductReviews === 'undefined' && !isLoading) throw new Error("something went wrong");
   console.log(ProductReviews)
