@@ -25,3 +25,12 @@
 .font-normal {
     @apply text-sm md:text-base;
 }
+textarea .dark{
+    color:black;
+}
+textarea .light{
+    color:black
+}
+textarea {
+    color:black
+}

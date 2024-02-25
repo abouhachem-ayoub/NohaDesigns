@@ -41,7 +41,7 @@ const starValues = [1,2,3,4,5];
                 onChange={e=>setRatingText(e.target.value)}
                 value={ratingText}
                 rows={4}
-                className="w-full px-2 py-3 border rounded-md"
+                className="w-full px-2 py-3 border rounded-md text-black"
                 >
                 </textarea>
         </div>
