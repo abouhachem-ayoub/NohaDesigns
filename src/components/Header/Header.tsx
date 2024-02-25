@@ -7,14 +7,21 @@ import ThemeContext from "@/context/themeContext";
 import { MdOutlineLightMode } from "react-icons/md";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-
+import { Lugrasimo } from "next/font/google";
+const lugrasimo = Lugrasimo({subsets:["latin"] ,
+weight:['400'],
+style:['normal'],
+variable:"--font-lugrasimo" 
+})
 const Header = () => {
+
+const classes = `${lugrasimo.className} font-black text-tertiary-dark`
  const {darkTheme,setDarkTheme} = useContext(ThemeContext);
  const {data:session} = useSession();
   return (
     <header className="py-10 px-4 container mx-auto text-xl md:flex-nowrap items-center justify-between">
         <div className="flex items-center w-full md:w-3/4 lg:w-[100%] sm:w-1/4">
-            <Link href="/" className="font-black text-tertiary-dark">
+            <Link href="/" className={classes}>
                 Noha's Designs
             </Link>
             <ul className="flex items-center ml-5 ">

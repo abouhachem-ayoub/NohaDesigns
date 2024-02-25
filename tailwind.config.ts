@@ -10,15 +10,16 @@ const config: Config = {
    theme: {
     extend: {
       colors:{
-        primary:"#038C7f",
-        secondary:"#F2C641",
+        primary:"#0D9276",
+        secondary:"#FEECE2",
         tertiary:{
-          dark:"#F27405",
-          light:"#F2C641"
+          dark:"#E78895",
+          light:"#FEECE2"
         }
       },
       fontFamily:{
-        poppins : ['var(--font-poppins)',...fontFamily.sans]
+        poppins : ['var(--font-poppins)',...fontFamily.sans],
+        lugrasimo : ['var(--font-lugrasimo)',...fontFamily.sans]
       }
     },
   },
