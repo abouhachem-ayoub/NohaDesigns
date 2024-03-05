@@ -34,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
       </head>
       <body className={poppins.className}>
         <NextAuthProvider>

@@ -31,7 +31,6 @@ const ProductDetails = (props: { params: { _id: string } }) => {
         revalidateOnFocus: true,
         revalidateOnReconnect: true,
         revalidateOnMount:true,
-        refreshInterval:1000 
             });
         if(check) {
             isBought=true;
