@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center py-4">
                     <BsTelephoneOutbound className="me-5"/>
-                    <p>+212 - 621 996 400</p>
+                    <p>+212 - xx xx xx xx</p>
                 </div>
                 <div className="flex items-center pt-4">
                     <BiMessageDetail className="me-5"/>
